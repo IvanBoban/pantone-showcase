@@ -1,10 +1,15 @@
-import React from "react";
+import React from 'react'
+import propTypes from 'prop-types'
+export default function CardDescription({ name, year }) {
+    return (
+        <section className="desc">
+            <div className="art-title">{name}</div>
+            <div className="art-date">{year}</div>
+        </section>
+    )
+}
 
-export default function CardDescription() {
-  return (
-    <section className="desc">
-      <div className="art-title"> So Fry</div>
-      <div className="art-date">2021.</div>
-    </section>
-  );
+CardDescription.propTypes = {
+    name: propTypes.string.isRequired,
+    year: propTypes.number.isRequired,
 }
