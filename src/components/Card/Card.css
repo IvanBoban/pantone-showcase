@@ -4,3 +4,17 @@
     display: flex;
     flex-direction: column;
 }
+
+.animate {
+    animation-duration: 1s;
+    animation-name: flip;
+}
+
+@keyframes flip {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}

@@ -7,10 +7,12 @@ const useControls = () => {
     const [isPreviousDisabled, setIsPreviousDisabled] = React.useState(true)
     const [isNextDisabled, setIsNextDisabled] = React.useState(false)
     const activeImg = imgs[activeIndex]
+    const element = React.useRef()
 
     const setNextImg = () => {
         if (activeIndex < imgs.length - 1) {
             setActiveIndex(activeIndex + 1)
+
             return
         }
         return
@@ -19,6 +21,7 @@ const useControls = () => {
     const setPreviousImg = () => {
         if (activeIndex > 0) {
             setActiveIndex(activeIndex - 1)
+
             return
         }
         return
@@ -38,7 +41,11 @@ const useControls = () => {
             return
         }
         setIsNextDisabled(false)
-    }, [activeIndex])
+    }, [activeIndex, imgs.length])
+
+    React.useEffect(() => {
+        element.current = document.querySelector('.card')
+    }, [])
 
     return {
         activeImg,

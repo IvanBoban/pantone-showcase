@@ -1,5 +1,6 @@
 import CouchPotato from '../assets/CouchPotato.jpg'
 import FlowerPizza from '../assets/FlowerPizza.jpg'
+import BubbleGum from '../assets/BubbleGum.jpg'
 
 const imgsArray = [
     {
@@ -9,7 +10,12 @@ const imgsArray = [
     },
     {
         src: FlowerPizza,
-        name: 'Flower pizza',
+        name: 'Slice of life',
+        year: 2021,
+    },
+    {
+        src: BubbleGum,
+        name: 'I woke up like this',
         year: 2021,
     },
 ]
