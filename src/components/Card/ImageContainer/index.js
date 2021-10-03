@@ -1,6 +1,6 @@
 import React from 'react'
 import propTypes from 'prop-types'
-
+import './ImageContainer.css'
 export default function ImageContainer({ src, alt }) {
     return <img src={src} alt={alt} />
 }

@@ -1,5 +1,7 @@
 import React from 'react'
 import propTypes from 'prop-types'
+import './CardDescription.css'
+
 export default function CardDescription({ name, year }) {
     return (
         <section className="desc">

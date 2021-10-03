@@ -2,6 +2,7 @@ import React from 'react'
 import CardDescription from './CardDescription'
 import ImageContainer from './ImageContainer'
 import imgsObj from '../../imgObj'
+import './Card.css'
 export default function index() {
     return (
         <article className="card">
