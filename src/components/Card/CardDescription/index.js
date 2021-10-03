@@ -1,5 +1,4 @@
 import React from 'react'
-import propTypes from 'prop-types'
 import './CardDescription.css'
 
 export default function CardDescription({ name, year }) {
@@ -9,9 +8,4 @@ export default function CardDescription({ name, year }) {
             <div className="art-date">{year}</div>
         </section>
     )
-}
-
-CardDescription.propTypes = {
-    name: propTypes.string.isRequired,
-    year: propTypes.number.isRequired,
 }

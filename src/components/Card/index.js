@@ -1,13 +1,16 @@
 import React from 'react'
 import CardDescription from './CardDescription'
 import ImageContainer from './ImageContainer'
-import imgsObj from '../../imgObj'
 import './Card.css'
-export default function index() {
+
+export default function Card({ activeImgObj }) {
     return (
         <article className="card">
-            <ImageContainer src={imgsObj.src} alt={imgsObj.name} />
-            <CardDescription name={imgsObj.name} year={imgsObj.year} />
+            <ImageContainer src={activeImgObj.src} alt={activeImgObj.name} />
+            <CardDescription
+                name={activeImgObj.name}
+                year={activeImgObj.year}
+            />
         </article>
     )
 }
