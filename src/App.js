@@ -1,9 +1,12 @@
 import './App.css'
-import Card from './components/Card'
+import Controls from './components/Controls'
+import { ImagesContextProvider } from './context/ImageContext'
 function App() {
     return (
         <div className="App">
-            <Card />
+            <ImagesContextProvider>
+                <Controls />
+            </ImagesContextProvider>
         </div>
     )
 }
