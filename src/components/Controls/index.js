@@ -4,14 +4,23 @@ import Card from '../Card'
 import './Controls.css'
 
 export default function Controls() {
-    const { activeImg, setNextImg, setPreviousImg } = useControls()
+    const {
+        activeImg,
+        setNextImg,
+        setPreviousImg,
+        isNextDisabled,
+        isPreviousDisabled,
+    } = useControls()
     return (
-        <>
+        <main>
             <Card activeImgObj={activeImg} />
             <div className="controls">
-                <button onClick={setPreviousImg}>Previous</button>
-                <button onClick={setNextImg}>Next</button>
+                <button
+                    onClick={setPreviousImg}
+                    disabled={isPreviousDisabled}
+                ></button>
+                <button onClick={setNextImg} disabled={isNextDisabled}></button>
             </div>
-        </>
+        </main>
     )
 }
